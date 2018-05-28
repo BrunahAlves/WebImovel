@@ -73,8 +73,38 @@ public class LojaServlet extends HttpServlet {
         int metroQuadrado = Integer.parseInt(request.getParameter("metroQuadrado"));
         double preco = Double.parseDouble(request.getParameter("preco"));
         String endereco = request.getParameter("endereco");
-               
-        FakeStorage.Loja.List.add(new Models.Loja(true, true, metroQuadrado, preco, endereco));
+        
+        
+        //determinar imposto
+        Models.ISeguro calculo = new Models.CalculoImposto();
+        calculo.setTipoImovel("Loja");
+        calculo.setValorImovel(preco);
+        
+        
+        //instanciar o Imovel
+        Models.Loja imovel = new Models.Loja(true, true, metroQuadrado, preco, endereco);
+       
+        
+        //determinar o status do imóvel
+        String status = request.getParameter("status");
+        imovel.setStatus(status);
+        calculo.setStatus(status);
+        
+        //determinar o preco do imóvel com imposto
+        imovel.setPrecoImposto(calculo.calcularImposto());
+        
+        
+        //determinar o seguro e a prioridade de segurança
+        Models.Seguro seg = new Models.Seguro ();
+        seg.setImovel(imovel);
+        seg.setPrioridade(seg.determinarPrioridadeSeguranca(calculo));
+        
+        //aplicar o seguro no imovel
+        imovel.setSeguro(seg);
+        
+        //adicionar o imovel no FakeStorage
+        //FakeStorage.Loja.List.add(new Models.Loja(true, true, metroQuadrado, preco, endereco));
+        FakeStorage.Loja.List.add(imovel);
         return listar(request, response);
     }
     
@@ -89,6 +119,35 @@ public class LojaServlet extends HttpServlet {
         user.setPreco(preco);
         user.setEndereco(endereco);
 
+        
+        
+        
+        //recalcular Imposto
+        
+        Models.ISeguro calculo = new Models.CalculoImposto();
+        calculo.setTipoImovel("Loja");
+        calculo.setValorImovel(preco);
+        
+        //determinar o status do imóvel
+        String status = request.getParameter("status");
+        user.setStatus(status);
+        calculo.setStatus(status);
+        
+        //determinar o preco do imóvel com imposto
+        user.setPrecoImposto(calculo.calcularImposto());
+        
+        
+        //determinar o seguro e a prioridade de segurança
+        Models.Seguro seg = new Models.Seguro ();
+        seg.setImovel(user);
+        seg.setPrioridade(seg.determinarPrioridadeSeguranca(calculo));
+        
+        //aplicar o seguro no imovel
+        user.setSeguro(seg);
+        
+        
+        
+        
 
         return listar(request, response);
     }

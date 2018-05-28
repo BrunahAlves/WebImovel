@@ -48,4 +48,37 @@ public class Imovel extends BaseModel{
         this.Preco = preco;
         this.Endereco = endereco;
     }
+    
+    private Seguro seguro;
+
+    public Seguro getSeguro() {
+        return seguro;
+    }
+
+    public void setSeguro(Seguro seguro) {
+        this.seguro = seguro;
+    }
+    
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    private double precoImposto;
+
+    public double getPrecoImposto() {
+        return precoImposto;
+    }
+
+    public void setPrecoImposto(double precoImposto) {
+        this.precoImposto = precoImposto;
+    }
+
+    
+    
 }

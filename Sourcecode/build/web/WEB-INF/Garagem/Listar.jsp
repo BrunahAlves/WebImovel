@@ -27,14 +27,20 @@
                         <th scope="col">#</th>
                         <th scope="col">Endereco</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Preço - Imposto</th>
+                        <th scope="col">Seguro</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% for (Models.Casa u : FakeStorage.Casa.List) {%>
+                    <% for (Models.Garagem u : FakeStorage.Garagem.List) {%>
                     <tr>
                         <th scope="row"><%=u.getId()%></th>
                         <td><%=u.getEndereco()%></td>
                         <td><%=u.getPreco()%></td>
+                        <td><%=u.getPrecoImposto()%></td>
+                        <td><%=u.getSeguro().getPrioridade()%></td>
+                        <td><%=u.getStatus()%></td>
                         <td><a href="Garagem?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Garagem?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
                     </tr>
                     <% }%>

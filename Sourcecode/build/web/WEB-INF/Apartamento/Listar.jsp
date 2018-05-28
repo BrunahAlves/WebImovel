@@ -28,6 +28,9 @@
                         <th scope="col">Endereco</th>
                         <th scope="col">Andar</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Preço - Imposto</th>
+                        <th scope="col">Seguro</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +40,9 @@
                         <td><%=u.getEndereco()%></td>
                         <td><%=u.getAndar()%></td>
                         <td><%=u.getPreco()%></td>
+                        <td><%=u.getPrecoImposto()%></td>
+                        <td><%=u.getSeguro().getPrioridade()%></td>
+                        <td><%=u.getStatus()%></td>
                         <td><a href="Apartamento?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Apartamento?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
                     </tr>
                     <% }%>

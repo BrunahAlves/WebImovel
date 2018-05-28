@@ -28,6 +28,9 @@
                         <th scope="col">Endereco</th>
                         <th scope="col">Tem Garagem</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Preço - Imposto</th>
+                        <th scope="col">Seguro</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,7 +40,10 @@
                         <td><%=u.getEndereco()%></td>
                         <td><%=u.isTemGaragem()%></td>
                         <td><%=u.getPreco()%></td>
-                        <td><a href="Casa?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Casa?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
+                        <td><%=u.getPrecoImposto()%></td>
+                        <td><%=u.getSeguro().getPrioridade()%></td>
+                        <td><%=u.getStatus()%></td>
+                        <td><a href="Sobrado?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Sobrado?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
                     </tr>
                     <% }%>
                 </tbody>

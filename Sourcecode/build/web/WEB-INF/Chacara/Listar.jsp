@@ -26,8 +26,10 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Endereco</th>
-                        <th scope="col">Tem Garagem</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Preço - Imposto</th>
+                        <th scope="col">Seguro</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +38,9 @@
                         <th scope="row"><%=u.getId()%></th>
                         <td><%=u.getEndereco()%></td>
                         <td><%=u.getPreco()%></td>
+                        <td><%=u.getPrecoImposto()%></td>
+                        <td><%=u.getSeguro().getPrioridade()%></td>
+                        <td><%=u.getStatus()%></td>
                         <td><a href="Chacara?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Chacara?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
                     </tr>
                     <% }%>
