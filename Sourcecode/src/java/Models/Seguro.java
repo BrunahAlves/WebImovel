@@ -15,16 +15,16 @@ public class Seguro{
     
     public String determinarPrioridadeSeguranca(ISeguro pC){
         String resultado = null;
-        double imposto;
+        double precoComImposto;
         String status = pC.getStatus();
-        imposto = pC.calcularImposto();
+        precoComImposto = pC.calcularImposto();
         
         
         if(status.equals("Novo")){ //1
-            if(imposto < 700){//2
+            if(precoComImposto < 110000){//2
                resultado = ("Segurança - Prioridade baixa");//3
             }
-            else if(imposto < 1200){//4
+            else if(precoComImposto < 250000){//4
                 resultado = ("Segurança - Prioridade media");//5
             }
             else{//6
@@ -32,10 +32,10 @@ public class Seguro{
             }
         }
         else if(status.equals("Usado")){//8
-            if(imposto < 550){//9
+            if(precoComImposto < 150000){//9
               resultado = ("Segurança - Prioridade baixa");//10 
             }
-            else if(imposto < 900){//11
+            else if(precoComImposto < 270000){//11
               resultado = ("Segurança - Prioridade media");//12  
             }
             else{//13
@@ -43,10 +43,10 @@ public class Seguro{
             }
         }
         else{//15
-           if(imposto < 400){//16
+           if(precoComImposto < 90000){//16
               resultado = ("Segurança - Prioridade baixa");//17 
            }
-           else if(imposto < 700){//18
+           else if(precoComImposto < 130000){//18
               resultado = ("Segurança - Prioridade media");//19 
            }
            else{//20

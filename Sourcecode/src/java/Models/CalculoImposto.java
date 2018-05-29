@@ -22,34 +22,34 @@ public class CalculoImposto implements ISeguro{
     @Override
     public double calcularImposto() {
         if (getTipoImovel().equals("Terreno")){
-            setPorcentagem(1.10f);
+            setPorcentagem(1.01f);
         }
         else if(getTipoImovel().equals("Garagem")){
-            setPorcentagem(1.12f);
+            setPorcentagem(1.01f);
         }
         else if(getTipoImovel().equals("Loja")){
-            setPorcentagem(1.14f);
+            setPorcentagem(1.05f);
         }
         else if(getTipoImovel().equals("Kitnet")){
-            setPorcentagem(1.16f);
+            setPorcentagem(1.02f);
         }
         else if(getTipoImovel().equals("Sobrado")){
-            setPorcentagem(1.18f);
+            setPorcentagem(1.02f);
         }
         else if(getTipoImovel().equals("Flat")){
-            setPorcentagem(1.20f);
+            setPorcentagem(1.02f);
         }
         else if(getTipoImovel().equals("Casa")){
-            setPorcentagem(1.22f);
+            setPorcentagem(1.03f);
         }
         else if(getTipoImovel().equals("Cobertura")){
-            setPorcentagem(1.24f);
+            setPorcentagem(1.04f);
         }
         else if(getTipoImovel().equals("Chacara")){
-            setPorcentagem(1.26f);
+            setPorcentagem(1.03f);
         }
         else if(getTipoImovel().equals("Apartamento")){
-            setPorcentagem(1.28f);
+            setPorcentagem(1.04f);
         }
         //double calImposto = ((getPorcentagem() * getValorImovel()) / 100);
         double calImposto = ((getPorcentagem() * getValorImovel()));
