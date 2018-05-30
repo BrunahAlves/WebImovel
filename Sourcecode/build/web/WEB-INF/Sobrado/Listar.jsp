@@ -43,7 +43,7 @@
                         <td><%=u.getPrecoImposto()%></td>
                         <td><%=u.getSeguro().getPrioridade()%></td>
                         <td><%=u.getStatus()%></td>
-                        <td><a href="Casa?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Casa?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
+                        <td><a href="Sobrado?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Sobrado?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
                     </tr>
                     <% }%>
                 </tbody>

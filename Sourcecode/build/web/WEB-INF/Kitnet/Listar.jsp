@@ -43,7 +43,7 @@
                         <td><%=u.getPrecoImposto()%></td>
                         <td><%=u.getSeguro().getPrioridade()%></td>
                         <td><%=u.getStatus()%></td>
-                        <td><a href="Apartamento?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Apartamento?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
+                        <td><a href="Kitnet?c=Detalhar&Id=<%=u.getId()%>">Editar</a> | <a href="Kitnet?c=Remover&Id=<%=u.getId()%>">Remover</a> </td>
                     </tr>
                     <% }%>
                 </tbody>

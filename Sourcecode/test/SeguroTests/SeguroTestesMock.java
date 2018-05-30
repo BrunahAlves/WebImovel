@@ -26,7 +26,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriBaixaNMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(699.9);
+        expect(mock.calcularImposto()).andReturn(109999.9);
         expect(mock.getStatus()).andReturn("Novo");
         replay(mock);
         
@@ -37,7 +37,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriMediaNMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(1199.9);
+        expect(mock.calcularImposto()).andReturn(249999.9);
         expect(mock.getStatus()).andReturn("Novo");
         replay(mock);
         
@@ -48,7 +48,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriAltaNMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(1200.0);
+        expect(mock.calcularImposto()).andReturn(250000.0);
         expect(mock.getStatus()).andReturn("Novo");
         replay(mock);
         
@@ -59,7 +59,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriBaixaUMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(549.9);
+        expect(mock.calcularImposto()).andReturn(149999.9);
         expect(mock.getStatus()).andReturn("Usado");
         replay(mock);
         
@@ -70,7 +70,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriMediaUMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(899.9);
+        expect(mock.calcularImposto()).andReturn(269999.9);
         expect(mock.getStatus()).andReturn("Usado");
         replay(mock);
         
@@ -81,7 +81,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriAltaUMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(900.0);
+        expect(mock.calcularImposto()).andReturn(270000.0);
         expect(mock.getStatus()).andReturn("Usado");
         replay(mock);
         
@@ -92,7 +92,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriBaixaCMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(399.9);
+        expect(mock.calcularImposto()).andReturn(89999.9);
         expect(mock.getStatus()).andReturn("Em construcao");
         replay(mock);
         
@@ -103,7 +103,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriMediaCMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(699.9);
+        expect(mock.calcularImposto()).andReturn(129999.9);
         expect(mock.getStatus()).andReturn("Em construcao");
         replay(mock);
         
@@ -114,7 +114,7 @@ public class SeguroTestesMock extends TestCase{
     public void testPriAltaCMock(){
         ISeguro mock = createMock(ISeguro.class);
         
-        expect(mock.calcularImposto()).andReturn(700.0);
+        expect(mock.calcularImposto()).andReturn(130000.0);
         expect(mock.getStatus()).andReturn("Em construcao");
         replay(mock);
         
