@@ -75,5 +75,10 @@ public class CalculoImpostoTestesJUnit extends TestCase {
         assertEquals(1.04, calculo.calcularImposto());
     }
     
+    public void testCalcularImpostogetStatus() {
+    	calculo.setStatus("Novo");
+    	assertEquals("Novo", calculo.getStatus());
+    }
+    
     
 }

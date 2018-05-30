@@ -48,9 +48,12 @@ public class CalculoImposto implements ISeguro{
         else if(getTipoImovel().equals("Chacara")){//18
             setPorcentagem(1.03f);//19
         }
-        else if(getTipoImovel().equals("Apartamento")){//20
-            setPorcentagem(1.04f);//21
+        else {
+            setPorcentagem(1.04f);//20
         }
+        /*else if(getTipoImovel().equals("Apartamento")){//20
+            setPorcentagem(1.04f);//21
+        }*/
         //double calImposto = ((getPorcentagem() * getValorImovel()) / 100);
         //double calImposto = ((getPorcentagem() * getValorImovel()));
         //double calImposto = ((getPorcentagem() * getValorImovel()));
@@ -62,7 +65,7 @@ public class CalculoImposto implements ISeguro{
         //return calImposto;
         
         
-        return Double.valueOf(String.format(Locale.US, "%.2f", ((getPorcentagem() * getValorImovel()))));//22
+        return Double.valueOf(String.format(Locale.US, "%.2f", ((getPorcentagem() * getValorImovel()))));//21
     }
 
     public String getTipoImovel() {
