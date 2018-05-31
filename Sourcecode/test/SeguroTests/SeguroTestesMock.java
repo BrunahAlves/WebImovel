@@ -89,6 +89,30 @@ public class SeguroTestesMock extends TestCase{
         assertEquals("Segurança - Prioridade alta", seguro.determinarPrioridadeSeguranca(mock));
     }
     
+    
+    
+    public void testPriMinimaCMock(){
+        ISeguro mock = createMock(ISeguro.class);
+        
+        expect(mock.calcularImposto()).andReturn(69999.9);
+        expect(mock.getStatus()).andReturn("Em construcao");
+        replay(mock);
+        
+        Seguro seguro = new Seguro();
+        assertEquals("Segurança - Prioridade minima", seguro.determinarPrioridadeSeguranca(mock));
+    } 
+   
+    public void testPriMuitoBaixaCMock(){
+        ISeguro mock = createMock(ISeguro.class);
+        
+        expect(mock.calcularImposto()).andReturn(79999.9);
+        expect(mock.getStatus()).andReturn("Em construcao");
+        replay(mock);
+        
+        Seguro seguro = new Seguro();
+        assertEquals("Segurança - Prioridade muito baixa", seguro.determinarPrioridadeSeguranca(mock));
+    }
+    
     public void testPriBaixaCMock(){
         ISeguro mock = createMock(ISeguro.class);
         
