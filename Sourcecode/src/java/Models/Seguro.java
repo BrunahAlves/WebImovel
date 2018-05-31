@@ -34,23 +34,23 @@ public class Seguro{
             else if(precoComImposto < 270000){//11
               resultado = ("Segurança - Prioridade media");//12  
             }
-            else{//13
-              resultado = ("Segurança - Prioridade alta");//14 
+            else{//
+              resultado = ("Segurança - Prioridade alta");//13 
             }
         }
         else{//
-           if(precoComImposto < 90000){//15
-              resultado = ("Segurança - Prioridade baixa");//16 
+           if(precoComImposto < 90000){//14
+              resultado = ("Segurança - Prioridade baixa");//15 
            }
-           else if(precoComImposto < 130000){//17
-              resultado = ("Segurança - Prioridade media");//18 
+           else if(precoComImposto < 130000){//16
+              resultado = ("Segurança - Prioridade media");//17 
            }
            else{//
-              resultado = ("Segurança - Prioridade alta");//29 
+              resultado = ("Segurança - Prioridade alta");//18 
            }
         }
         
-        return resultado;//20
+        return resultado;//19
     }
 
     public Imovel getImovel() {
