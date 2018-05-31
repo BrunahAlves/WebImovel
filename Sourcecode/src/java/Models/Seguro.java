@@ -38,19 +38,19 @@ public class Seguro{
               resultado = ("Segurança - Prioridade alta");//14 
             }
         }
-        else{//15
-           if(precoComImposto < 90000){//16
-              resultado = ("Segurança - Prioridade baixa");//17 
+        else{//
+           if(precoComImposto < 90000){//15
+              resultado = ("Segurança - Prioridade baixa");//16 
            }
-           else if(precoComImposto < 130000){//18
-              resultado = ("Segurança - Prioridade media");//19 
+           else if(precoComImposto < 130000){//17
+              resultado = ("Segurança - Prioridade media");//18 
            }
            else{//
-              resultado = ("Segurança - Prioridade alta");//20 
+              resultado = ("Segurança - Prioridade alta");//29 
            }
         }
         
-        return resultado;//21
+        return resultado;//20
     }
 
     public Imovel getImovel() {
